@@ -12,7 +12,7 @@ $tel = $object['inArguments'][1]['telefono'];
 
 
 
-$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge.'&telefono='.$tel;
+$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge.$tel'&telefono='.$tel;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
