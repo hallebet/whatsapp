@@ -14,12 +14,7 @@
     "arguments": {
         "execute": {
             "inArguments": [
-		    {
-                            "message": ""
-                        },
-		     {
-                            "telefono": "{Contact.Attribute.COGNIZANT_HC.Text}}"
-                        }
+		  
 		    
                 
             ],
