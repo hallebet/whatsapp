@@ -6,7 +6,7 @@
 
 $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
-$missatge = $object['inArguments'][1]['message'];
+$missatge = $object['inArguments'][0]['message'];
 
 
 
