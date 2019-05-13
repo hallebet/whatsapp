@@ -4,13 +4,13 @@
 /*			By Albert Seuba	- 042319					*/
 /********************************************************/
 
-//$json4 = file_get_contents('php://input'); 
-//$object = json_decode($json4, true);
-//$missatge = $object['inArguments'][0]['message'];
+$json4 = file_get_contents('php://input'); 
+$object = json_decode($json4, true);
+$missatge = $object['inArguments'][0]['message'];
 
 
 
-$ur = 'https://www.cangureo.es/public/whatsapp';
+$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
@@ -25,5 +25,5 @@ echo $response;
 
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
 echo '{"status":"ok"}';
-
+echo $ur;
 ?>
