@@ -14,9 +14,7 @@
     "arguments": {
         "execute": {
             "inArguments": [
-		     {
-                    "message": ""
-                }
+		   
                 
             ],
 			"outArguments": [
