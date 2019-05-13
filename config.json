@@ -14,7 +14,13 @@
     "arguments": {
         "execute": {
             "inArguments": [
-		   
+		    {
+                            "message": ""
+                        },
+		     {
+                            "telefono": "{Contact.Attribute.COGNIZANT_HC.Text}}"
+                        }
+		    
                 
             ],
 			"outArguments": [
@@ -62,7 +68,16 @@
    "schema": {
 		"arguments": {
 			"execute": {
-				"inArguments": [],
+				"inArguments": [
+				
+					  {
+                        "telefono": {
+                            "dataType": "Phone",
+                            "isNullable": false,
+                            "direction": "in"   
+                        }
+                    }
+				],
 				 "outArguments": [
                     {
                         "status": {
