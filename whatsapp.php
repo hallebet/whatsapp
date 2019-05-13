@@ -7,18 +7,12 @@
 $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
 $missatge = $object['inArguments'][0]['message'];
-  if (isset($object['inArguments'][1]['telefono'])){
-$tel = $object['inArguments'][1]['telefono'];
-}
-    else{
-        $tel = 'anonim';
-    }   
-      
 
 
 
 
-$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge.''.$tel'&telefono='.$tel;
+
+$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
