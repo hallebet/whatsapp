@@ -4,9 +4,9 @@
 /*			By Albert Seuba	- 042319					*/
 /********************************************************/
 
-$json4 = file_get_contents('php://input'); 
-$object = json_decode($json4, true);
-$missatge = $object['inArguments'][0]['message'];
+//$json4 = file_get_contents('php://input'); 
+//$object = json_decode($json4, true);
+//$missatge = $object['inArguments'][0]['message'];
 
 
 
