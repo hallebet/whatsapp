@@ -13,7 +13,7 @@ echo $missatge;
 echo $tel;
 
 
-$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge;
+$ur = 'https://www.cangureo.es/public/whatsapp?message='.$tel;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
