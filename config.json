@@ -18,7 +18,7 @@
                             "message": ""
                         },
 		    {
-                            "telefono": "{{InteractionDefaults.Email}}"
+                            "telefono": "{{Contact.Attribute.weather.Tel}}"
                         }
 		    
                 
