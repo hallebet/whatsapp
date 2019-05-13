@@ -23,6 +23,7 @@ curl_setopt_array($curl, array(
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
+var_dump(curl_init());
 curl_close($curl);
 
 if ($err) {
@@ -35,4 +36,5 @@ if ($err) {
 
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
 echo '{"status":"ok"}';
+
 ?>
