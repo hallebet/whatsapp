@@ -10,8 +10,8 @@
 
 
 
-
-$ch = curl_init('https://www.cangureo.es/public/whatsapp');
+$ur = 'https://www.cangureo.es/public/whatsapp';
+$ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
 );
