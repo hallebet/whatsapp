@@ -14,9 +14,7 @@
     "arguments": {
         "execute": {
             "inArguments": [
-		     {
-          "phone": "{{Contact.Attribute.COGNIZANT_HC.Country}}"
-        }
+		    
                 
             ],
 			"outArguments": [
