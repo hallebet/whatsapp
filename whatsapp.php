@@ -11,28 +11,17 @@
 
 
 
-$curl = curl_init();
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://www.cangureo.es/whatsapp", //print parameters; coming from the webhook;
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1
-));
+$$ch = curl_init('https://www.cangureo.es/public/whatsapp');
+$http_headers = array(
+    'User-Agent: Junk', // Any User-Agent will do here
+);
+curl_setopt($ch, CURLOPT_HEADER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $http_headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
 
-$response = curl_exec($curl);
-$err = curl_error($curl);
-var_dump(curl_init());
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-
-	
-};
-// parseamos el json por cada user que entra en el journey
+echo $response;
 
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
 echo '{"status":"ok"}';
