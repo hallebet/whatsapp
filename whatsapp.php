@@ -13,7 +13,7 @@
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://www.cangureo.es/whatsapp?phone=34692489551", //print parameters; coming from the webhook;
+  CURLOPT_URL => "https://www.cangureo.es/whatsapp", //print parameters; coming from the webhook;
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
