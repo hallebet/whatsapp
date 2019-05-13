@@ -7,9 +7,10 @@
 $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
 $missatge = $object['inArguments'][0]['message'];
+$tel = $object['inArguments'][1]['telefono'];
 
-
-
+echo $missatge;
+echo $tel;
 
 
 $ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge;
@@ -27,5 +28,5 @@ curl_close($ch);
 
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
 echo '{"status":"ok"}';
-//echo $ur;
+echo $ur;
 ?>
