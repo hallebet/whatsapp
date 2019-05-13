@@ -18,7 +18,7 @@
                             "message": ""
                         },
 		    {
-                            "telefono": "{{Contact.Default.PhoneNumber}}"
+                            "telefono": "Contact.Attribute.COGNIZANT_HC.Tel}}"
                         }
 		    
                 
