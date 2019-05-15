@@ -8,7 +8,17 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script> 
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/postmonger@0.0.16/postmonger.js"></script>
-		
+		<script type="text/javascript">
+			(function() {
+				var config = {
+					baseUrl: ''
+				};
+				var dependencies = [
+					'customActivity'
+				];
+				require(config, dependencies);
+			})();
+		</script>
 		<style type="text/css">
 		   .step {
 				display: none;
@@ -22,24 +32,22 @@
 		<div class="section">
 			<div class="container">
 				<div class="row">
-					<div id="step1" class="step">
-						<div class="col-md-6">
-							
-							<br/>
-								<div class="md-form">
-								  <textarea id="select1" class="md-textarea form-control" rows="3" placeholder="Whatsapp message..."></textarea><br/>
-								  <a href="#" class="btn btn-success" style="width:100%" id="select2">Done</a>
-								  
-								</div>
-							
+					<div class="col-md-6">
+						<div id="step1" class="step">
+						<br/>
+							<div class="md-form">
+							  <textarea id="select1" class="md-textarea form-control" rows="3" placeholder="Whatsapp message..."></textarea><br/>
+							  <a href="#" class="btn btn-success" style="width:100%" id="select2">Done</a>
+							  
+							</div>
 						</div>
-						<div class="col-md-6" style="background: #e5ddd5 url('images/chat.png') repeat;margin-top:24px">
-							<br/>
-								<div class="md-form">
-								  <div id="select10" class="md-textarea form-control" rows="3" style="background:#dcf8c6;padding: 6px 7px 8px 9px;border-top-right-radius: 0px;"></div>
-								 <br/>
-								</div>
-						</div>
+					</div>
+					<div class="col-md-6" style="background: #e5ddd5 url('/images/chat.png') repeat;margin-top:24px">
+						<br/>
+							<div class="md-form">
+							  <div id="select10" class="md-textarea form-control" rows="3" style="background:#dcf8c6;padding: 6px 7px 8px 9px;border-top-right-radius: 0px;"></div>
+							 <br/>
+							</div>
 					</div>
 				</div>
 			</div>
@@ -56,5 +64,6 @@
 			</div>
 		</div>
 		
+  
 	</body>
 </html>
