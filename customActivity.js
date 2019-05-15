@@ -125,7 +125,7 @@ define([
                 });
                 connection.trigger('updateButton', {
                     button: 'next',
-                    text: 'next',
+                    text: 'save',
                     visible: true
                 });
                 break;
