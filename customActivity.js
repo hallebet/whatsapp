@@ -147,6 +147,13 @@ define([
 					var albert = $('#select1').val();
 					console.log (albert);
 					$('#select10').html(albert);
+	    var d = new Date();
+  var n = d.getHours();
+    $('#select10').append ('<small><span>' + n + '</span></small>');
+	  $('#select10').append ('<small><span>:</span></small>');
+    var e = new Date();
+  var m = e.getMinutes();
+   $('#select10').append ('<small><span>' + m + '</span></small>');
 					return $('#select1').val();
 				}
 				var albert = $('#select1').val();
