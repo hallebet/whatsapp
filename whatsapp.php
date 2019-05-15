@@ -27,6 +27,6 @@ echo $response;
 
 
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
-echo '{"status":"ok"}';
+//echo '{"status":"ok"}';
 //echo $ur;
 ?>
