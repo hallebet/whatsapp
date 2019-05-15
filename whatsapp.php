@@ -23,8 +23,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $http_headers);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($ch);
 curl_close($ch);
-$object2 = json_decode($response, true);
-print_r($object2);
+
 
 
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
