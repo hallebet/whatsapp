@@ -152,7 +152,7 @@ define([
     $('#select10').append ('<small><span>' + n + '</span></small>');
 	  $('#select10').append ('<small><span>:</span></small>');
     var e = new Date();
-  var m = e.getMinutes();
+  var m = e.getMinutes() < 10 ? '0' : '') + e.getMinutes();
    $('#select10').append ('<small><span>' + m + '</span></small>');
 					return $('#select1').val();
 				}
