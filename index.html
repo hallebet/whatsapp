@@ -29,11 +29,13 @@
 		</style>
 	</head>
 	<body>
+	<div id="step1" class="step">
 		<div class="section">
 			<div class="container">
 				<div class="row">
+				
 					<div class="col-md-6">
-						<div id="step1" class="step">
+						
 						<br/>
 							<div class="md-form">
 							  <textarea id="select1" class="md-textarea form-control" rows="3" placeholder="Whatsapp message..."></textarea><br/>
@@ -41,7 +43,7 @@
 							  
 							</div>
 						</div>
-					</div>
+					
 					<div class="col-md-6" style="background: #e5ddd5 url('/images/chat.png') repeat;margin-top:24px">
 						<br/>
 							<div class="md-form">
@@ -52,18 +54,27 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="step2" class="step">
 		<div class="section">
 			<div class="container">
 				<div class="row">
+				<p>Your message:</p>
 					<div class="col-md-8">			
-						<div id="step2" class="step">
-							<p><b>You chose the message:</b><br/><div id="message"></div></p>
+						
+							<div class="col-md-6" style="background: #e5ddd5 url('/images/chat.png') repeat;margin-top:24px">
+						<br/>
+							<div class="md-form">
+							  <div id="message" class="md-textarea form-control" rows="3" style="background:#dcf8c6;padding: 6px 7px 8px 9px;border-top-right-radius: 0px;"></div>
+							 <br/>
+							</div>
+					
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+	</div>	
   
 	</body>
 </html>
