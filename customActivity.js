@@ -31,9 +31,11 @@ define([
       $('#select2').click(function() {
 					var message = getMessage();
 					var name = $('#select1').val();
-					
+					 connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
+
 					$('#message').html(message);
 				});
+				
 	}
 	function initialize (data) {
         if (data) {
