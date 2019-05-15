@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -31,17 +32,22 @@
 		<div class="section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-6">
 						<div id="step1" class="step">
 						<br/>
-						<p>Select the message</p>
-							<select id="select1" class="browser-default custom-select custom-select-lg mb-3">
-								
-								<option value="Hi">Hi</option>
-								<option value="Hello">Hello</option>
-								
-							</select>
+							<div class="md-form">
+							  <textarea id="select1" class="md-textarea form-control" rows="3" placeholder="Whatsapp message..."></textarea><br/>
+							  <a href="#" class="btn btn-success" style="width:100%" id="select2">Done</a>
+							  
+							</div>
 						</div>
+					</div>
+					<div class="col-md-6" style="background: #e5ddd5 url('images/chat.png') repeat;margin-top:24px">
+						<br/>
+							<div class="md-form">
+							  <div id="select10" class="md-textarea form-control" rows="3" style="background:#dcf8c6;padding: 6px 7px 8px 9px;border-top-right-radius: 0px;"></div>
+							 <br/>
+							</div>
 					</div>
 				</div>
 			</div>
@@ -57,5 +63,7 @@
 				</div>
 			</div>
 		</div>
+		
+  
 	</body>
 </html>
