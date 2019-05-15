@@ -28,12 +28,12 @@ define([
 		connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 		
-        $('#select1').change(function() {
-            var message = getMessage();
-            connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-
-            $('#message').html(message);
-        });
+      $('#select2').click(function() {
+					var message = getMessage();
+					var name = $('#select1').val();
+					
+					$('#message').html(message);
+				});
 	}
 	function initialize (data) {
         if (data) {
@@ -62,7 +62,7 @@ define([
             showStep(null, 1);
             connection.trigger('updateButton', { button: 'next', enabled: false });
         } else {
-            $('#select1').find('option[value='+ message +']').attr('selected', 'selected');
+            $('#select1').val();
             $('#message').html(message);
             showStep(null, 2);
         }
@@ -131,7 +131,7 @@ define([
     }
 
     function save() {
-        var name = $('#select1').find('option:selected').html();
+        var name = $('#select1').val();
         var value = getMessage();
 
         payload.name = name;
@@ -140,10 +140,13 @@ define([
 		connection.trigger('updateActivity', payload);
     }
 
-    function getMessage() {
-		var albert = $('#select1').find('option:selected').attr('value').trim();
-		console.log (albert);
-        return $('#select1').find('option:selected').attr('value').trim();
-    }
+   function getMessage() {
+					var albert = $('#select1').val();
+					console.log (albert);
+					$('#select10').html(albert);
+					return $('#select1').val();
+				}
+				var albert = $('#select1').val();
+				console.log (albert);
 
 });
