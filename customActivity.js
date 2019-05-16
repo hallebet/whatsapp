@@ -137,7 +137,9 @@ define([
         var value = getMessage();
 		var value2 = getMessage2();
 		
-		value = encodeURIComponent(value)
+		value = encodeURIComponent(value);
+	    	value = value.replace("%7B%7B", "{{");
+		value = value.replace("%7D%7D", "}}");
 
         payload.name = name;
 		payload['arguments'].execute.inArguments = [{ "message": value },{"telefono": value2}];
