@@ -135,7 +135,7 @@ define([
     function save() {
         var name = $('#select1').val();
         var value = getMessage();
-	 value = encodeURIComponent(value)
+	 //value = encodeURIComponent(value)
 
         payload.name = name;
 		payload['arguments'].execute.inArguments = [{ "message": value }];
