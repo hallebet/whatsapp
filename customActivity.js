@@ -135,10 +135,17 @@ define([
     function save() {
         var name = $('#select1').val();
         var value = getMessage();
-	 //value = encodeURIComponent(value)
+		var value2 = getMessage2();
+		var name2 = $('#telefono').val();
+		value = encodeURIComponent(value)
 
         payload.name = name;
 		payload['arguments'].execute.inArguments = [{ "message": value }];
+		payload['metaData'].isConfigured = true;
+		connection.trigger('updateActivity', payload);
+		
+		payload.name = name2;
+		payload['arguments'].execute.inArguments = [{ "telefono": value2 }];
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
     }
@@ -156,6 +163,12 @@ define([
    $('#select10').append ('<small><span>' + m + '</span></small>');
 					return $('#select1').val();
 				}
+	 function getMessage2() {
+					
+					return $('#telefono').val();
+				}
+				
+				
 				var albert = $('#select1').val();
 				console.log (albert);
 
