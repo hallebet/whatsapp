@@ -136,18 +136,15 @@ define([
         var name = $('#select1').val();
         var value = getMessage();
 		var value2 = getMessage2();
-		var name2 = $('#telefono').val();
+		
 		value = encodeURIComponent(value)
 
         payload.name = name;
-		payload['arguments'].execute.inArguments = [{ "message": value }];
+		payload['arguments'].execute.inArguments = [{ "message": value },{"telefono": value2}];
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
 		
-		payload.name = name2;
-		payload['arguments'].execute.inArguments = [{ "telefono": value2 }];
-		payload['metaData'].isConfigured = true;
-		connection.trigger('updateActivity', payload);
+		
     }
 
    function getMessage() {
