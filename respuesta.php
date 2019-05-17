@@ -6,7 +6,7 @@
 $json4 = file_get_contents('php://input'); 
 
 $object = json_decode($json4, true);
-$telefono = $object['From'];
+$tel = $object['From'];
 $missatge = $object['Body'];
 echo $missatge;
 
