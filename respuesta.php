@@ -3,14 +3,14 @@
 /*			Whatsapp answer endpoint					*/
 /*			By Albert Seuba	- 042319					*/
 /********************************************************/
-//$json4 = file_get_contents('php://input'); 
+$json4 = file_get_contents('php://input'); 
 
-//$object = json_decode($json4, true);
-//$telefono = $object['From'];
-//$telefono = $object['Body'];
+$object = json_decode($json4, true);
+$telefono = $object['From'];
+$missatge = $object['Body'];
+echo $missatge;
 
-
-$ur = 'https://www.cangureo.es/public/answer?message='.$missatge.'&telefono='.$tel;
+$ur = 'https://www.cangureo.es/public/answer?missatge='.$missatge.'&telefono='.$tel;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
