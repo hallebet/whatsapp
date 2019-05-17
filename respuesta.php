@@ -8,7 +8,9 @@ $json4 = file_get_contents('php://input');
 $object = json_decode($json4, true);
 $telefono = $object['from'];
 $missatge = $object['body'];
-
+$a = $object['sid'];
+echo $a;
+echo ($a);
 echo $missatge;
 echo ('hola');
 $ur = 'https://www.cangureo.es/public/answer?message='.$missatge.'&telefono='.$telefono;
