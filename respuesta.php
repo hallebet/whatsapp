@@ -6,12 +6,11 @@
 $json4 = file_get_contents('php://input'); 
 
 $object = json_decode($json4, true);
-$tel = $object['From'];
-$tel = str_replace("whatsapp:+","",$tel);
-$missatge = $object['Body'];
-echo $missatge;
+$telefono = $object['from'];
+$missatge = $object['body'];
 
- $ur = 'https://www.cangureo.es/public/answer?missatge='.$missatge.'&telefono='.$tel;
+
+$ur = 'https://www.cangureo.es/public/answer?message='.$missatge.'&telefono='.$telefono;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
@@ -24,5 +23,5 @@ curl_close($ch);
 echo $response;
 //devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
 //echo '{"status":"ok"}';
-//echo $ur; 
+//echo $ur;
 ?>
