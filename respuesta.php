@@ -7,6 +7,7 @@ $json4 = file_get_contents('php://input');
 
 $object = json_decode($json4, true);
 $tel = $object['From'];
+$tel = str_replace("whatsapp:+","",$tel);
 $missatge = $object['Body'];
 echo $missatge;
 
