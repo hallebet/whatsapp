@@ -9,7 +9,8 @@ $object = json_decode($json4, true);
 $telefono = $object['from'];
 $missatge = $object['body'];
 
-
+echo $missatge;
+echo ('hola');
 $ur = 'https://www.cangureo.es/public/answer?message='.$missatge.'&telefono='.$telefono;
 $ch = curl_init($ur);
 $http_headers = array(
