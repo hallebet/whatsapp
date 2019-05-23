@@ -72,6 +72,7 @@ define([
 
     function onGetTokens (tokens) {
          console.log(tokens);
+	     console.log("hola");
     }
 
     function onGetEndpoints (endpoints) {
