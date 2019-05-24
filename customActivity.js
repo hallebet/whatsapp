@@ -32,9 +32,9 @@ define([
 					var message = getMessage();
 					var name = $('#select1').val();
 					 connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-					var message3 = getMessage3();
+					var message30 = getMessage3();
 					$('#message').html(message);
-					$('#message2').html(message3);
+					$('#message2').html(message30);
 				});
 				
 	}
@@ -172,6 +172,7 @@ define([
 				}
 	 function getMessage3() {
 						var keyword = $('#keyword').val();
+		 console.log('keyword:'+keyword);
 					return $('#keyword').val();
 				}
 				
