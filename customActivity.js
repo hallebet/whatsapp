@@ -179,5 +179,7 @@ define([
 				
 				var albert = $('#select1').val();
 				console.log (albert);
+	var seuba =  $('#keyword').val();
+	console.log (seuba);
 
 });
