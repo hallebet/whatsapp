@@ -8,12 +8,13 @@ $json4 = file_get_contents('php://input');
 $object = json_decode($json4, true);
 $missatge = $object['inArguments'][0]['message'];
 $tel = $object['inArguments'][1]['telefono'];
+$keyword = $object['inArguments'][2]['keyword'];
 
 //echo $missatge;
 //echo $tel;
 
 
-$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge.'&telefono='.$tel;
+$ur = 'https://www.cangureo.es/public/whatsapp?message='.$missatge.'&telefono='.$tel.'&keyword='.$keyword;
 $ch = curl_init($ur);
 $http_headers = array(
     'User-Agent: Junk', // Any User-Agent will do here
