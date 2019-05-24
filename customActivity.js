@@ -32,8 +32,9 @@ define([
 					var message = getMessage();
 					var name = $('#select1').val();
 					 connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-
+					var message3 = getMessage3();
 					$('#message').html(message);
+					$('#message2').html(message3);
 				});
 				
 	}
@@ -137,6 +138,7 @@ define([
         var name = $('#select1').val();
         var value = getMessage();
 		var value2 = getMessage2();
+		var value3 = getMessage3();
 		
 		value = encodeURIComponent(value);
 	   
@@ -144,7 +146,7 @@ define([
 		value = value.replace(/\%7D%7D/g, '}}');
 
         payload.name = name;
-		payload['arguments'].execute.inArguments = [{ "message": value },{"telefono": value2}];
+		payload['arguments'].execute.inArguments = [{ "message": value },{"telefono": value2},{"keyword": value3}];
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
 		
@@ -168,6 +170,11 @@ define([
 					
 					return $('#telefono').val();
 				}
+	 function getMessage3() {
+						var keyword = $('#keyword').val();
+					return $('#keyword').val();
+				}
+				
 				
 				
 				var albert = $('#select1').val();
