@@ -1,11 +1,11 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/whatsapp.png",
+       "icon": "images/whatsapp.JPG",
        "category": "message"
     },
-    "type": "REST",
-    "lang": {
+     "type": "REST",
+     "lang": {
        "en-US": {
            "name": "Whatsapp",
            "description": "Send Whatsapp messages"
